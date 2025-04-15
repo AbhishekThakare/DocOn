@@ -1,0 +1,27 @@
+.contact-section {
+            background: #f8f9fa;
+            padding: 50px 0;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .info-box {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .info-box i {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+    
+        .faq-section {
+            background: #f8f9fa;
+            padding: 50px 0;
+        }

@@ -1,0 +1,32 @@
+.doctor-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+.doctor-icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.article-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.article-card:hover {
+    transform: translateY(-5px);
+}
+.article-img {
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
