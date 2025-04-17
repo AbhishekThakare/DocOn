@@ -355,11 +355,13 @@ export const PatientProfile = () => {
       Object.keys(data).forEach((key) => {
         formData.append(key, data[key]);
       });
-  
+      
+      formData.append("userId", userId);
+
       // Append the file
       const fileInput = document.querySelector('input[name="image"]');
       if (fileInput && fileInput.files.length > 0) {
-        formData.append("image", fileInput.files[0]);
+        formData.append('image', fileInput.files[0]);
       }
   
       const response = profileData
@@ -368,7 +370,7 @@ export const PatientProfile = () => {
               "Content-Type": "multipart/form-data",
             },
           })
-        : await axios.post("/profile", formData, {
+        : await axios.post("/addwithfile", formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },

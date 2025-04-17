@@ -175,7 +175,7 @@ export const DoctorDashboard = () => {
         setProfile(res.data.data);
       } catch (err) {
         console.error(err);
-        alert("Failed to fetch doctor profile.");
+        // alert("Failed to fetch doctor profile.");
       } finally {
         setLoading(false);
       }
@@ -189,16 +189,32 @@ export const DoctorDashboard = () => {
       <DoctorNavbar />
       
       <div className="container py-5">
-        {loading ? (
-          <div className="text-center py-5">
-            <div className="spinner-grow text-primary" role="status" style={{ width: '3rem', height: '3rem' }}>
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <p className="mt-4 text-muted fs-5">Loading your profile...</p>
+      {loading ? (
+        <div className="d-flex justify-content-center align-items-center" style={{ height: "70vh" }}>
+          <div className="spinner-grow text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
-        ) : !profile ? (
-          <div className="alert alert-warning text-center">Doctor profile not found.</div>
-        ) : (
+        </div>
+      ) : !profile ? (
+        <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: "70vh" }}>
+          <div className="text-center p-5 bg-white rounded-4 shadow" style={{ maxWidth: "600px" }}>
+            <div className="health-icon mb-4">
+              <i className="fas fa-user-md text-primary"></i>
+              <i className="fas fa-plus text-secondary"></i>
+            </div>
+            <h3 className="mb-3">Complete Your Health Profile</h3>
+            <p className="text-muted mb-4">
+              Setup your profile to unlock personalized health insights and features.
+            </p>
+            <button 
+              className="btn btn-primary px-4 py-2 rounded-pill"
+              onClick={() => window.location.href = "/mydocprofile"}
+            >
+              <i className="fas fa-edit me-2"></i> Setup Profile
+            </button>
+          </div>
+        </div>
+      ) : (
           <>
             <div className="row justify-content-center mb-5">
               <div className="col-lg-10 text-center">
